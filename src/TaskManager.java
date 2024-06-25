@@ -1,7 +1,18 @@
+/**
+ * @author Arek, Niklas Louis
+ * @vesion 1.0
+ */
+
 public class TaskManager {
     private Task[] tasks;
     private int taskCount;
 
+    /**
+     * 
+     * @param Task[] Liste der Tasks
+     * @param taskCount Anzahl der Task in der Liste
+     * 
+     */
     public TaskManager() {
         this.tasks = new Task[99];
         this.taskCount = 0;
@@ -11,12 +22,20 @@ public class TaskManager {
         tasks[taskCount] = new Task(taskCount + 1, description);
         taskCount++;
     }
+    /**
+     * Fügt Task in die Liste hinzu
+     * @return
+     */
 
     public void showTasks() {
         for (int i = 0; i < taskCount; i++) {
             System.out.println(tasks[i]);
         }
     }
+    /**
+     * Zeigt alle Task in der Liste an
+     * @param taskId
+     */
 
     public void markTaskAsCompleted(int taskId) {
         for (int i = 0; i < taskCount; i++) {
@@ -26,6 +45,10 @@ public class TaskManager {
             }
         }
     }
+    /**
+     * Setzt gewuenschte Task auf erledigt
+     * @param taskId
+     */
 
     public void showCompletedTasks() {
         for (int i = 0; i < taskCount; i++) {
@@ -34,4 +57,8 @@ public class TaskManager {
             }
         }
     }
+    /**
+     * Zeigt alle erledigten Task an
+     * @return
+     */
 }

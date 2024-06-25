@@ -8,7 +8,6 @@ public class Main {
         manager.addTask("Write Code");
         manager.addTask("Learn JVScript");
         manager.showTasks();
-
         manager.markTaskAsCompleted(1);
         manager.showCompletedTasks();
 	}
